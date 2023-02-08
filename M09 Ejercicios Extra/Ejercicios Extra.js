@@ -6,6 +6,9 @@ function deObjetoAarray(objeto) {
    // Estos elementos debe ser cada par clave:valor del objeto recibido.
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
+
+   objeto.A = arrayA = ['A1' [], 'A2: []'];
+   objeto.B = arrayB = ['B1: []', 'B2: []'];
 }
 
 function numberOfCharacters(string) {
