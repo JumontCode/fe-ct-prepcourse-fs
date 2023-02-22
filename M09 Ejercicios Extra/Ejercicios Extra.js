@@ -7,8 +7,13 @@ function deObjetoAarray(objeto) {
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
 
-   objeto.A = arrayA = ['A1' [], 'A2: []'];
-   objeto.B = arrayB = ['B1: []', 'B2: []'];
+   var Arreglo = [];
+   var elemento;
+   for(var prop in objeto){
+      elemento = new Array(prop, objeto[prop]);
+      Arreglo.push(elemento);
+   }
+   return Arreglo;
 }
 
 function numberOfCharacters(string) {
@@ -17,6 +22,24 @@ function numberOfCharacters(string) {
    // Las letras deben estar en orden alfabético.
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
+
+   for(var i = 0; i<=string.length; i++){
+      if(numberOfCharacters[string[i]]===undefined){
+         numberOfCharacters[string[i]] = 1;
+      }
+      else{
+         numberOfCharacters[string[i]] = numberOfCharacters[string[i]] + 1;
+      }
+
+      var deobjeto_Arreglo = Object.entries(numberOfCharacters)
+      var ordenados = deobjeto_Arreglo.sort(function(a,b){
+         if(a[0] < b[0]){ return -1;}
+         if(a[0] > b[0]){ return 1;}
+         return 0;
+      })
+      var dearreglo_Objeto = Object.assign({}, ordenados)
+   }
+   return dearreglo_Objeto;
 }
 
 function capToFront(string) {
@@ -25,6 +48,18 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
+
+   var inicio = ''
+   var final = ''
+   for ( i = 0; i < string.length; i++ ){
+     if (string[i].toUpperCase() === string[i]){
+      inicio += string[i]
+     }
+     else{
+      final += string[i]
+     } 
+   }
+   return inicio + final
 }
 
 function asAmirror(frase) {
@@ -32,6 +67,8 @@ function asAmirror(frase) {
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
+
+   
 }
 
 function capicua(numero) {

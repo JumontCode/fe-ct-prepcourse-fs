@@ -1,20 +1,20 @@
 var arrayOfNumbers = [1,2,3,4,5];
 var arreglo = [];
+var string = 'soyHenry';
 
+// Recibes un string con algunas letras en mayúscula y otras en minúscula.
+   // Debes enviar todas las letras en mayúscula al comienzo del string.
+   // Retornar el string.
+   // [EJEMPLO]: soyHENRY ---> HENRYsoy
+   // Tu código:
 
-
-var arrayOfStrings = ['amore','odio','amados']
-  // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
-  // Luego retorna un nuevo arreglo con estos elementos.
-  // Tu código:
-
-  // for(var i = 0; i > arrayOfStrings.length; i++){
-  //   if(arrayOfStrings[0][i] === 'a'){
-  //     arreglo.push(arrayOfStrings[i]);
-  //     console.log('Estas son las palabras con a: ' + arreglo);
-  //   }
-  // }
-  
-
-  arrayOfStrings.forEach(element => {if(element[0] === 'a'){arreglo.push(element)}})
-  console.log(arreglo)
+   var inicio = ''
+   var final = ''
+   for ( i = 0; i < string.length; i++ ){
+     if (string[i].toUpperCase() === string[i]){
+      inicio += string[i]
+     }else{
+      final += string[i]
+     } 
+   }
+   console.log( inicio + final)
