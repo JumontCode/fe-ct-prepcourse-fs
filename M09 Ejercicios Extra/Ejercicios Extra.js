@@ -23,7 +23,7 @@ function numberOfCharacters(string) {
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
 
-   for(var i = 0; i<=string.length; i++){
+ /*  for(var i = 0; i<=string.length; i++){
       if(numberOfCharacters[string[i]]===undefined){
          numberOfCharacters[string[i]] = 1;
       }
@@ -39,7 +39,8 @@ function numberOfCharacters(string) {
       })
       var dearreglo_Objeto = Object.assign({}, ordenados)
    }
-   return dearreglo_Objeto;
+   return dearreglo_Objeto;*/
+
 }
 
 function capToFront(string) {
@@ -49,8 +50,8 @@ function capToFront(string) {
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
 
-   var inicio = ''
-   var final = ''
+   var inicio = '';
+   var final = '';
    for ( i = 0; i < string.length; i++ ){
      if (string[i].toUpperCase() === string[i]){
       inicio += string[i]
@@ -75,6 +76,11 @@ function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+
+   var deNumAStrim = numero.toString();
+   var esCapicua = deNumAStrim.split('').reverse().join('');
+   if(esCapicua === deNumAStrim){return 'Es capicua'}
+   else{return 'No es capicua'}
 }
 
 function deleteAbc(string) {
