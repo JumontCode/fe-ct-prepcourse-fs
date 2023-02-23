@@ -23,24 +23,13 @@ function numberOfCharacters(string) {
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
 
- /*  for(var i = 0; i<=string.length; i++){
-      if(numberOfCharacters[string[i]]===undefined){
-         numberOfCharacters[string[i]] = 1;
-      }
-      else{
-         numberOfCharacters[string[i]] = numberOfCharacters[string[i]] + 1;
-      }
-
-      var deobjeto_Arreglo = Object.entries(numberOfCharacters)
-      var ordenados = deobjeto_Arreglo.sort(function(a,b){
-         if(a[0] < b[0]){ return -1;}
-         if(a[0] > b[0]){ return 1;}
-         return 0;
-      })
-      var dearreglo_Objeto = Object.assign({}, ordenados)
+   var objeto = {};
+   var palabraSeparada = string.split('');
+   var palabraOrdenada = palabraSeparada.sort();
+   for(var prop in palabraOrdenada){
+      objeto[palabraOrdenada[prop]] ?  objeto[palabraOrdenada[prop]]++ : objeto[palabraOrdenada[prop]]=1;
    }
-   return dearreglo_Objeto;*/
-
+   return objeto;
 }
 
 function capToFront(string) {
@@ -69,7 +58,11 @@ function asAmirror(frase) {
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
 
+   var cadena = frase.split(' ');
+   var palabra = cadena.map(e => e.split('').reverse().join(''));
+   var palabraInversa = palabra.join(' ');
    
+   return palabraInversa;
 }
 
 function capicua(numero) {
@@ -77,9 +70,9 @@ function capicua(numero) {
    // Caso contrario: "No es capicua".
    // Tu código:
 
-   var deNumAStrim = numero.toString();
-   var esCapicua = deNumAStrim.split('').reverse().join('');
-   if(esCapicua === deNumAStrim){return 'Es capicua'}
+   var deNumAString = numero.toString();
+   var esCapicua = deNumAString.split('').reverse().join('');
+   if(esCapicua === deNumAString){return 'Es capicua'}
    else{return 'No es capicua'}
 }
 
@@ -87,6 +80,13 @@ function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+
+   var clearABC = '';
+   for(var i = 0; i < string.length; i++){
+   if(string[i] !== 'a' && string[i] !== 'b' && string[i] !== 'c'){
+      clearABC += string[i];
+   }}
+   return clearABC;
 }
 
 function sortArray(arrayOfStrings) {
@@ -95,6 +95,12 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+
+   var arrayOrdenado = arrayOfStrings.sort(function(a,b){
+      return a.length - b.length;
+   });
+
+   return arrayOrdenado;
 }
 
 function buscoInterseccion(array1, array2) {
