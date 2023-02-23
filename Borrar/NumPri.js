@@ -1,39 +1,29 @@
-var arrayOfNumbers = [1,2,3,4,5];
 const arrayOfText = ['hsdsd','hj','hjk'];
-var arreglo = ["You", "looking", "beautiful", "are" ];
+
 var string = 'abcdefghiijhd';
 
 //  for(var i = 0; i<arrayOfText.length; i++){
 
-    // Recibes un arreglo de strings.
-   // Debe retornar un nuevo arreglo, pero con las palabras ordenadas en orden creciente a partir
-   // de la longitud de cada string.
-   // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
+   // Recibes dos arreglos de números.
+   // Debes retornar un nuevo arreglo en el que se guarden los elementos en común entre ambos arreglos.
+   // [EJEMPLO]: [4,2,3] U [1,3,4] = [3,4].
+   // Si no tienen elementos en común, retornar un arreglo vacío.
+   // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
 
-   /*var text = arrayOfText.sort(function(a,b){
-      if(a > b){return 1}
-      if(a < b){return -1}
-      return 0;
-   })
-   console.log(text) */
-    
-//    const enOrden = [].concat(arreglo);
-//    enOrden.sort();
-   
-   
-// console.log(enOrden)
+   /*
+   var nuevoArreglo = [];
+   var array1 = [1,2,3,4,5];
+   var array2 = [6,7,5,4,3,2];
 
-   // var cadena = string.split(' ');
-   // var palabra = cadena.map(i => i.split('').reverse().join(''));
-   // var palabraInverso = palabra.join('');
-   
-   // console.log(palabraInverso);
 
-   var arregloPadre = [];
-   var palabraSeparada = string.split('');
-   var palabraOrdenada = palabraSeparada.sort();
-   for(var prop in palabraOrdenada){
-      arregloPadre[palabraOrdenada[prop]] ?  arregloPadre[palabraOrdenada[prop]]++ : arregloPadre[palabraOrdenada[prop]]=1;
-   }
-   console.log(arregloPadre);
+   for(var i =0; i < array1.length;i++){
+      for(var j =0; j < array2.length;j++){
+           if(array1[i] == array2[j]){
+               nuevoArreglo.push(array1[i])
+           }
+      }
+      }
+
+  */
+   console.log(nuevoArreglo);

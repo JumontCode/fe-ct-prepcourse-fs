@@ -110,6 +110,16 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
+
+   var nuevoArreglo = [];
+   for(var i =0; i < array1.length;i++){
+      for(var j =0; j < array2.length;j++){
+           if(array1[i] == array2[j]){
+               nuevoArreglo.push(array1[i])
+           }
+      }
+      }
+      return nuevoArreglo;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
